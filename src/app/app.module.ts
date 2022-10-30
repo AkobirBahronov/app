@@ -17,11 +17,11 @@ import {
 import { AuthService, ScreenService, AppInfoService } from './shared/services';
 import { UnauthenticatedContentModule } from './unauthenticated-content';
 import { AppRoutingModule } from './app-routing.module';
-import { TasksComponent } from './pages/tasks/tasks.component';
 import { DxDataGridModule } from 'devextreme-angular';
+import { TaskModule } from './pages/tasks/tasks.component';
 
 @NgModule({
-  declarations: [AppComponent, TasksComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     SideNavOuterToolbarModule,
@@ -34,9 +34,9 @@ import { DxDataGridModule } from 'devextreme-angular';
     LoginFormModule,
     UnauthenticatedContentModule,
     AppRoutingModule,
-    DxDataGridModule,
+    TaskModule,
   ],
   providers: [AuthService, ScreenService, AppInfoService],
-  bootstrap: [AppComponent, TasksComponent],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

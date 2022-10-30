@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
+import { DxDataGridModule } from 'devextreme-angular';
 import 'devextreme/data/odata/store';
 
 @Component({
@@ -36,3 +37,9 @@ export class TasksComponent {
     ];
   }
 }
+@NgModule({
+  imports: [DxDataGridModule],
+  declarations: [TasksComponent],
+  exports: [TasksComponent],
+})
+export class TaskModule {}

@@ -9,7 +9,7 @@ import {
 import { AuthGuardService } from './shared/services';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
-import { TasksComponent } from './pages/tasks/tasks.component';
+import { TaskModule, TasksComponent } from './pages/tasks/tasks.component';
 import { DxDataGridModule, DxFormModule } from 'devextreme-angular';
 
 const routes: Routes = [
@@ -59,6 +59,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes, { useHash: true }),
     DxDataGridModule,
     DxFormModule,
+    TaskModule,
   ],
   providers: [AuthGuardService],
   exports: [RouterModule],
